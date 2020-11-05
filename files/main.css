@@ -55,7 +55,7 @@ li > p { padding-top: 0; }
 .Projects { list-style: none; padding: 26px; }
 @media (min-width: 600px) { .Projects { padding: 52px; } }
 @media (min-width: 800px) { .Projects { padding: 26px 78px; } }
-@media (min-width: 1050px) { .Projects { padding-top: 26px; padding-bottom: calc(100% - 500px); margin-bottom: 0px; opacity: 0; animation: showProjects 1800ms 1800ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; } }
+@media (min-width: 1050px) { .Projects { padding-top: 26px; padding-bottom: calc(100%); margin-bottom: 0px; opacity: 0; animation: showProjects 1800ms 1800ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; } }
 
 .Project-item { position: relative; }
 
