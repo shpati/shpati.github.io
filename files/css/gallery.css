@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+.gallery-item {
+    width: auto;
+    max-width: 250px; /* Max thumbnail size */
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: contain;
+}
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 67%;
+    max-height: 67%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 30px;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+.next {
+    right: 20px;
+}
+.prev {
+    left: 20px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+    .gallery-item {
+        max-width: 200px; /* Smaller size on tablets */
+        max-height: 200px;
+    }
+    .modal-content {
+        max-width: 80vw; /* Adjust modal content for smaller screens */
+        max-height: 80vh;
+    }
+}
+@media (max-width: 480px) {
+    .gallery-item {
+        max-width: 150px; /* Smaller size on mobile phones */
+        max-height: 150px;
+    }
+    .modal-content {
+        max-width: 70vw; /* Further adjust modal content for smaller screens */
+        max-height: 70vh;
+    }
+}
